@@ -6,12 +6,8 @@ I don't like seeing long lines when I read code, so I don't like writing long
 lines, either. The Ruby style guide [recommends][ruby-line-length] using an
 80-character limit, and I've found this to be an acceptable length, so we set
 that here:
-
 [ruby-line-length]: https://github.com/bbatsov/ruby-style-guide#80-character-limits
 
-``` vim
-set textwidth=80
-```
 
 However, for Git commit messages, Tim Pope [recommends][git-line-length] using a
 line length of 72 characters, and GitHub's UI also assumes this length as well
@@ -39,15 +35,15 @@ Finally, when a line exceeds the set `textwidth` we mark the characters that are
 past the limit with the `CharsExceedingLineLength` syntax group. (The color for
 this is also defined in [colors].)
 
-``` vim
-function! HighlightCharsExceedingLineLength()
-  call matchadd('CharsExceedingLineLength', '\%>' . &textwidth . 'v.\+', -1)
-endfunction
+/*``` vim*/
+/*function! HighlightCharsExceedingLineLength()*/
+  /*call matchadd('CharsExceedingLineLength', '\%>' . &textwidth . 'v.\+', -1)*/
+/*endfunction*/
 
-augroup local
-  autocmd BufNewFile * :call HighlightCharsExceedingLineLength()
-  autocmd BufRead * :call HighlightCharsExceedingLineLength()
-augroup END
-```
+/*augroup local*/
+  /*autocmd BufNewFile * :call HighlightCharsExceedingLineLength()*/
+  /*autocmd BufRead * :call HighlightCharsExceedingLineLength()*/
+/*augroup END*/
+/*```*/
 
 [colors]: colors.vim.md

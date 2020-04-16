@@ -59,22 +59,24 @@ Usually I use the dark mode, but when I'm outside or in a sunny place, I'll use
 light mode. It's helpful to be able to switch between the two, so first we start
 off with a few functions to do just that:
 
+Add this back in if things break
+let g:airline_theme="solarized"
+let g:airline_solarized_bg="dark"
+
 ``` vim
 function! s:UseColorScheme(type)
   if a:type == "light"
     let s:color_scheme_type="light"
     set background=light
+    let g:airline_theme="violet"
     silent! colorscheme solarized
-    let g:airline_theme="solarized"
-    let g:airline_solarized_bg="dark"
     highlight SpecialKey ctermfg=14 ctermbg=15
     highlight SignColumn ctermbg=15
   else
     let s:color_scheme_type="dark"
     set background=dark
     silent! colorscheme solarized
-    let g:airline_theme="solarized"
-    let g:airline_solarized_bg="light"
+    let g:airline_theme="violet"
     highlight SpecialKey ctermfg=10 ctermbg=8
     highlight SignColumn ctermbg=8
   end

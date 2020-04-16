@@ -138,3 +138,4 @@ so you get the missing feedback:
 ``` vim
 set showcmd
 ```
+

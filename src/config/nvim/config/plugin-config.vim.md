@@ -130,32 +130,6 @@ let g:indentLine_char = '⡇'
 let g:indentLine_color_term = 10
 ```
 
-## coffee-script
-
-I don't like how the [CoffeeScript plugin][coffee-script-vim] highlights things
-by default -- it's a bit overzealous. Here we turn off highlighting for curly
-braces, square brackets, parentheses and operators:
-
-[coffee-script-vim]: https://github.com/kchmck/vim-coffee-script
-
-``` vim
-hi link coffeeObject NONE
-hi link coffeeBracket NONE
-hi link coffeeCurly NONE
-hi link coffeeParen NONE
-hi link coffeeSpecialOp NONE
-
-hi clear Operator
-hi clear SpecialOp
-```
-
-Since CoffeeScript is installed via npm globally, we tell the plugin where to
-find it:
-
-``` vim
-let coffee_compiler = "/usr/local/bin/coffee"
-```
-
 ## Airline
 
 We configure the look of [Airline]:
@@ -186,19 +160,6 @@ Since Airline already shows the mode, hide the mode that Vim displays by default
 set noshowmode
 ```
 
-## ShowMarks
-
-Here we configure [ShowMarks] so that its color fits with Solarized better:
-
-[ShowMarks]: https://github.com/vim-scripts/ShowMarks
-
-``` vim
-hi default ShowMarksHLl cterm=bold ctermfg=darkblue ctermbg=233
-hi default ShowMarksHLu cterm=bold ctermfg=darkblue ctermbg=233
-hi default ShowMarksHLo cterm=bold ctermfg=darkblue ctermbg=233
-hi default ShowMarksHLm cterm=bold ctermfg=darkblue ctermbg=233
-```
-
 ## splitjoin
 
 [splitjoin] has some strange default behavior, so we attempt to corral it.
@@ -206,6 +167,9 @@ First, we specify that when taking a hash split across multiple lines and
 turning it into a single line, keep the curly braces around the hash:
 
 [splitjoin]: https://github.com/AndrewRadev/splitjoin.vim
+
+gS to split a one-liner into multiple lines
+gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
 
 ``` vim
 let g:splitjoin_ruby_curly_braces = 0
@@ -377,15 +341,11 @@ let g:airline#extensions#ale#enabled = 1
 
 ## auto-pairs
 
-[AutoPairs] used to be enabled by default, but now we disable it:
 
 [AutoPairs]: https://github.com/jiangmiao/auto-pairs
 
-``` vim
-let g:AutoPairs = {}
-```
 
-However, we make it so that it can be toggled with
+[AutoPairs] is enabled by default, but we can toggle it with
 <kbd>,</kbd><kbd>a</kbd><kbd>p</kbd><kbd>t</kbd>:
 
 ``` vim

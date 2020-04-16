@@ -176,6 +176,12 @@ nmap <Leader>el :lopen<CR>
 nmap <Leader>ef :ll 1<CR>
 ```
 
+Clear the cache because Ctrl-P suuuuucks
+
+``` vim
+nmap <Leader>ll :CtrlPClearCache<CR>
+```
+
 Finally, when modifying a colorscheme, sometimes it's helpful to know which
 syntax group the cursor sits within.
 <kbd>,</kbd><kbd>s</kbd><kbd>y</kbd><kbd>n</kbd> lets us do this
