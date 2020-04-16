@@ -223,13 +223,19 @@ augroup END
 
 [Rainbow Parentheses]: https://github.com/kien/rainbow_parentheses.vim
 
+Keep it on all the time because toggle is annoying and i like colors
+
+```vim
+au VimEnter * RainbowParenthesesToggle
+```
+
 We also add a ton more variety to the colors:
 
 ``` vim
 let g:rbpt_colorpairs = [
+    \ ['darkmagenta', 'DarkOrchid3'],
     \ ['brown',       'RoyalBlue3'],
     \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
     \ ['Darkblue',    'firebrick3'],
     \ ['gray',        'RoyalBlue3'],
     \ ['darkgreen',   'RoyalBlue3'],
