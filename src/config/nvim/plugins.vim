@@ -19,6 +19,9 @@ Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mitsuhiko/vim-json'
 Plug 'nicholaides/words-to-avoid.vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-surround'
 
 "maybe these are useful
 Plug 'cakebaker/scss-syntax.vim'
@@ -31,7 +34,6 @@ Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 "dont know wtf this is
 Plug 'noah/vim256-color'
 Plug 'othree/html5-syntax.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-abolish'
@@ -47,7 +49,6 @@ Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby', { 'commit': '84565856e6965144e1c34105e03a7a7e87401acb' }
 Plug 'vim-scripts/FormatBlock'

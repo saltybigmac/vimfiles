@@ -227,9 +227,9 @@ We also add a ton more variety to the colors:
 
 ``` vim
 let g:rbpt_colorpairs = [
+    \ ['darkmagenta', 'DarkOrchid3'],
     \ ['brown',       'RoyalBlue3'],
     \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
     \ ['Darkblue',    'firebrick3'],
     \ ['gray',        'RoyalBlue3'],
     \ ['darkgreen',   'RoyalBlue3'],
