@@ -2,11 +2,6 @@
 
 # Plugin configuration
 
-This file is where any settings related to plugins go. (At some point I'd like
-to make these sections more modular, where if I removed the plugin the section
-would no longer apply, but I haven't removed any of these plugins yet so this
-works great for now.)
-
 ## NERDTree
 
 <kbd>,</kbd><kbd>t</kbd><kbd>t</kbd> toggles the [NERDTree]:
@@ -195,17 +190,6 @@ augroup local
   autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown | setlocal textwidth=80
 augroup END
 ```
-
-## vim-slim
-
-`smartindent` messes things up for Slim files, so we disable that:
-
-``` vim
-augroup local
-  autocmd FileType slim setl nosmartindent
-augroup END
-```
-
 ## vim-tmux-runner
 
 Here we configure [vim-tmux-runner] so that before a command gets run, the
@@ -222,36 +206,6 @@ We also map <kbd>,</kbd><kbd>o</kbd> so that we can easily open a pane that's
 
 ``` vim
 nmap <leader>o :VtrOpenRunner({'orientation': 'h', 'percentage': 35})<CR>
-```
-
-## vim-spec-runner
-
-We configure [vim-spec-runner] so that commands are prepended with `bundle
-exec`:
-
-[vim-spec-runner]: https://github.com/gabebw/vim-spec-runner
-
-``` vim
-let g:spec_runner_dispatcher = 'call VtrSendCommand("bundle exec {command}")'
-```
-
-The plugin will automatically write the current file before running specs, but
-considering we don't autosave any other time we use Vim, we turn this off:
-
-``` vim
-let g:disable_write_on_spec_run = 1
-```
-
-Finally, we create some mappings:
-
-* <kbd>,</kbd><kbd>t</kbd> to run the current spec file
-* <kbd>,</kbd><kbd>s</kbd> to run just one spec (the one the cursor is within)
-* <kbd>,</kbd><kbd>l</kbd> to run whichever command was run last
-
-``` vim
-map <leader>t <plug>RunCurrentSpecFile
-map <leader>s <plug>RunFocusedSpec
-map <leader>l <plug>RunMostRecentSpec
 ```
 
 ## rainbow_parentheses
@@ -378,17 +332,6 @@ nmap <silent> <C-k> :TmuxNavigateUp<cr>
 nmap <silent> <C-l> :TmuxNavigateRight<cr>
 ```
 
-## Limelight
-
-We configure [Limelight] so that the color it uses matches Solarized colors:
-
-[Limelight]: https://github.com/junegunn/limelight.vim
-
-``` vim
-" TODO: Fix this color
-let g:limelight_conceal_ctermfg = 239
-```
-
 ## vim-togglecursor
 
 We configure [togglecursor] so that the default cursor is a non-blinking block
@@ -416,56 +359,3 @@ command! -range HashrocketStyle :<line1>,<line2>Bashrockets
 command! -range KeywordArgumentStyle :<line1>,<line2>Hashrockets
 ```
 
-## Colorizer
-
-By default, [Colorizer] doesn't turn on automatically. Here we turn it on for
-CSS and Sass files:
-
-[Colorizer]: https://github.com/lilydjwg/colorizer
-
-``` vim
-let g:colorizer_auto_filetype = 'css,scss'
-```
-
-The plugin also colorizes color strings in comments, but we turn that off here:
-
-``` vim
-let g:colorizer_skip_comments = 1
-```
-
-## vim-jsx
-
-My projects are set up such that I can use JSX in regular JavaScript files. So
-we configure the [jsx] plugin to do this as well:
-
-[jsx]: https://github.com/mxw/vim-jsx
-
-``` vim
-let g:jsx_ext_required = 0
-```
-
-## neco-ghc
-
-We configure tab completion for Haskell files:
-
-``` vim
-let g:haskellmode_completion_ghc = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-```
-
-## elm-vim
-
-When saving a file in Elm, we don't want to automatically run the file through
-`elm-format`. I get the rationale behind `elm-format`, but its indentation rules
-are weird (and it's clear that none of the authors write any tests):
-
-``` vim
-let g:elm_format_autosave = 0
-```
-
-## UltiSnips
-
-``` vim
-let g:UltiSnipsJumpForwardTrigger="<c-a>"
-let g:UltiSnipsJumpBackwardTrigger="<c-s>"
-```

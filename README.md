@@ -1,8 +1,9 @@
 # vimfiles
 
-I ❤️ Vim -- I use it for both professional and personal projects nearly every
-day. Before you is my personal configuration that I've crafted with the goal of
-writing code as efficiently as possible. Hopefully you find it useful!
+Hai. These are forked from my friend [Elliot Winkler](https://github.com/mcmire/vimfiles)
+because he's awesome and I'm lazy. I've modified some things and deleted what I don't need. 
+
+I ❤️ Vim
 
 ## Let's see what's inside
 
@@ -15,12 +16,12 @@ a regular basis, in rough order of importance:
 * [Ctrl-P][vim-ctrl-p]
 * [Ag][vim-ag]
 * [SuperTab][vim-supertab]
-* [togglecursor][vim-togglecursor]
 * [NERDCommenter][vim-nerdcommenter]
 * [endwise][vim-endwise]
 * [surround][vim-surround]
 * [vim-textobj-rubyblock][vim-textobj-rubyblock]
 * [Ale][ale]
+* [togglecursor][vim-togglecursor] // I need to figure out if I need this
 
 [vim-plug]: https://github.com/junegunn/vim-plug
 [vim-nerdtree]: http://github.com/scrooloose/nerdtree
@@ -46,7 +47,7 @@ yourself][documentation]!
 
 ## You can use it too
 
-Want this configuration for yourself? Here's how to make that happen.
+Want to be like me who wants to be like Elliott? Here's how to make that happen.
 
 ### Prerequisites
 
@@ -72,7 +73,7 @@ short alias to your shell:
 this.)
 
 Now if you're in a directory, you can boot into Vim -- all ready to edit files
-in that directory -- simply by navigating there and saying:
+in that directory -- by navigating there and saying:
 
     v
 
@@ -96,7 +97,7 @@ changes you need to make:
   font -- that is, a font that's patched to support Powerline characters (such
   as arrows and icons and things). There's a list of fonts you can choose from
   [here][powerline-fonts], or save yourself the trouble and use Fira Code, which
-  is superb. Whichever font you download, simply drop it in `~/Library/Fonts`
+  is superb. Whichever font you download, drop it in `~/Library/Fonts`
   and you can use it right away. **Make sure that the "non-ASCII" font is also
   set to the same Powerline font as the "normal" font, otherwise you'll get
   strange "X" characters in place of the Powerline characters.**
