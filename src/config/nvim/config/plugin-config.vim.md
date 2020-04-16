@@ -223,6 +223,12 @@ augroup END
 
 [Rainbow Parentheses]: https://github.com/kien/rainbow_parentheses.vim
 
+Keep it on all the time because toggle is annoying and i like colors
+
+```vim
+au VimEnter * RainbowParenthesesToggle
+```
+
 We also add a ton more variety to the colors:
 
 ``` vim
