@@ -365,3 +365,8 @@ command! -range HashrocketStyle :<line1>,<line2>Bashrockets
 command! -range KeywordArgumentStyle :<line1>,<line2>Hashrockets
 ```
 
+Vim Awesome git blame plugin
+
+```vim
+nnoremap <Leader>bl :<C-u>call gitblame#echo()<CR>
+```

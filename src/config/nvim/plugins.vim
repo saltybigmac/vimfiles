@@ -1,6 +1,7 @@
 "definitely use these
 Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
+"Plug 'joshdick/onedark.vim'
 Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -22,6 +23,7 @@ Plug 'nicholaides/words-to-avoid.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
+Plug 'zivyangll/git-blame.vim'
 
 "maybe these are useful
 Plug 'cakebaker/scss-syntax.vim'

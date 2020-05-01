@@ -63,8 +63,9 @@ Add this back in if things break
 let g:airline_theme="solarized"
 let g:airline_solarized_bg="dark"
 
-``` vim
+```vim
 function! s:UseColorScheme(type)
+
   if a:type == "light"
     let s:color_scheme_type="light"
     set background=light
@@ -79,6 +80,7 @@ function! s:UseColorScheme(type)
     let g:airline_theme="violet"
     highlight SpecialKey ctermfg=10 ctermbg=8
     highlight SignColumn ctermbg=8
+    highlight Comment cterm=italic
   end
 
   highlight ExtraWhitespace ctermfg=0 ctermbg=1

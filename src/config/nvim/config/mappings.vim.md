@@ -73,7 +73,6 @@ noremap Q gq
 <kbd>C</kbd> is the same thing as saying <kbd>c</kbd><kbd>$</kbd>; <kbd>D</kbd>
 is the same as <kbd>d</kbd><kbd>$</kbd>. So why not do the same for
 <kbd>y</kbd><kbd>$</kbd>?
-
 ``` vim
 nnoremap Y y$
 ```
@@ -103,7 +102,7 @@ end of the line:
 nmap <Leader>p$ "_Dp
 ```
 
-<kbd>,</kbd><kbd>p</kbd><kbd>o</kbd> will open a new line and paste into that
+<kbd>,</kbd><kbd>p</kbd><kbd>o</kbd> will paste a line below and then open a new
 line:
 
 ```
@@ -111,6 +110,7 @@ nmap <Leader>po o<Space><Backspace><Esc>p
 ```
 
 <kbd>,</kbd><kbd>p</kbd><kbd>c</kbd> will paste, overwriting the current line:
+
 
 ``` vim
 nmap <Leader>pc "_ddP
@@ -193,4 +193,16 @@ syntax group the cursor sits within.
 map <Leader>syn :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+```
+
+To go to the end of the line while in insert mode, <kdb>Ctrl</kbd><kbd>e</kdb>
+
+```vim
+inoremap <C-e> <C-o>$
+```
+
+Turn one liners into multiliners separated by periods or whatever
+
+```vim
+nnoremap <Leader>tp :%s/\./\r \./g<CR>
 ```
